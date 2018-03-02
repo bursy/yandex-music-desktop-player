@@ -1,3 +1,5 @@
+const menu = require('./menu')
+
 const electron = require('electron')
 const {app, globalShortcut} = require('electron')
 const BrowserWindow = electron.BrowserWindow
@@ -31,6 +33,7 @@ function createWindow() {
     })
 
     windowUtils.init(mainWindow)
+    menu.init()
 }
 
 app.on('ready', () => {
