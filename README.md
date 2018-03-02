@@ -1,6 +1,11 @@
 ## Yandex Music Desktop Player
 Electron-based desktop player for Yandex Music.
 
+##
+Features:
+* Global media key support (play/pause, next/previous)
+* Minimalistic separate app for those who have way more tabs than apps 
+
 ## Development
 ```sh
 git clone git@gitlab.com:bursy/yandex-music-desktop-player.git
