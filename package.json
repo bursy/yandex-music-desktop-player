@@ -1,7 +1,7 @@
 {
   "name": "yandex-music-desktop-player",
   "productName": "Yandex Music Desktop Player",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Yandex Music Desktop Player",
   "main": "main.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "make:win64": "electron-packager . yandex-music-desktop-player-x64 --overwrite --asar=true --platform=win32 --arch=x64 --icon=logo.ico --prune=true --out=release --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Yandex Music Desktop Player\"",
     "make:linux": "electron-packager . yandex-music-desktop-player --overwrite --asar=true --platform=linux --arch=x64 --icon=logo.ico --prune=true --out=release"
   },
-  "repository": "git@github.com:bursy/yandex-music-desktop-player.git",
+  "repository": "https://github.com/bursy/yandex-music-desktop-player.git",
   "keywords": [
     "Yandex",
     "Music",
