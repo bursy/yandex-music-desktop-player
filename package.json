@@ -1,7 +1,7 @@
 {
   "name": "yandex-music-desktop-player",
   "productName": "Yandex Music Desktop Player",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "Yandex Music Desktop Player",
   "main": "main.js",
   "scripts": {
