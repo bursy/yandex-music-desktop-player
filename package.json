@@ -6,8 +6,10 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "make:mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=logo.icns --prune=true --out=release",
-	"make:win": "electron-packager . yandex-music-desktop-player --overwrite --asar=true --platform=win32 --arch=ia32 --icon=logo.ico --prune=true --out=release --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Yandex Music Desktop Player\""
+    "make": "electron-packager . yandex-music-desktop-player --overwrite --icon=logo.ico --prune=true --out=release",
+    "make:mac": "electron-packager . yandex-music-desktop-player --overwrite --platform=darwin --arch=x64 --icon=logo.icns --prune=true --out=release",
+	"make:win": "electron-packager . yandex-music-desktop-player --overwrite --asar=true --platform=win32 --arch=ia32 --icon=logo.ico --prune=true --out=release --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Yandex Music Desktop Player\"",
+    "make:linux": "electron-packager . yandex-music-desktop-player --overwrite --asar=true --platform=linux --arch=x64 --icon=logo.ico --prune=true --out=release"
   },
   "repository": "git@gitlab.com:bursy/yandex-music-desktop-player.git",
   "keywords": [
