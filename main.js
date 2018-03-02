@@ -1,8 +1,8 @@
 const electron = require('electron')
-const app = electron.app
+const {app, globalShortcut} = require('electron')
 const BrowserWindow = electron.BrowserWindow
 
-//const path = require('path')
+const player = require('./player')
 const url = require('url')
 
 let mainWindow
@@ -27,7 +27,13 @@ function createWindow() {
     })
 }
 
-app.on('ready', createWindow)
+app.on('ready', () => {
+    createWindow()
+
+    globalShortcut.register('MediaPlayPause', () => player.playPause(mainWindow))
+    globalShortcut.register('MediaNextTrack', () => player.nextTrack(mainWindow))
+    globalShortcut.register('MediaPreviousTrack', () => player.previousTrack(mainWindow))
+})
 
 app.on('window-all-closed', function () {
     if (process.platform !== 'darwin') {
