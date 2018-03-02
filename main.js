@@ -13,7 +13,6 @@ function createWindow() {
     mainWindow = new BrowserWindow({
         width: 1280,
         height: 720,
-        title: "Yandex Music Desktop Player",
         icon: path.join(__dirname, "logo.png"),
         webPreferences: {
             nodeIntegration: false
