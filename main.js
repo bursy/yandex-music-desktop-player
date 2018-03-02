@@ -3,7 +3,9 @@ const {app, globalShortcut} = require('electron')
 const BrowserWindow = electron.BrowserWindow
 
 const player = require('./player')
+
 const url = require('url')
+const path = require('path')
 
 let mainWindow
 
@@ -12,6 +14,7 @@ function createWindow() {
         width: 1280,
         height: 720,
         title: "Yandex Music Desktop Player",
+        icon: path.join(__dirname, "logo.png"),
         webPreferences: {
             nodeIntegration: false
         }
