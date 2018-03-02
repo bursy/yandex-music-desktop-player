@@ -6,13 +6,14 @@
   "scripts": {
     "start": "electron ."
   },
+  "repository": "git@gitlab.com:bursy/yandex-music-desktop-player.git",
   "keywords": [
     "Yandex",
     "Music",
     "Desktop",
     "Player"
   ],
-  "author": "bursy",
+  "author": "bursy (Alex Ilyin)",
   "devDependencies": {
     "electron": "~1.8.2"
   }
