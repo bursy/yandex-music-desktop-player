@@ -6,11 +6,11 @@
   "main": "src/main.js",
   "scripts": {
     "start": "electron .",
-    "make": "electron-packager . yandex-music-desktop-player --overwrite --icon=src/resources/icon/logo.ico --prune=true --out=release",
-    "make:mac": "electron-packager . yandex-music-desktop-player-osx --overwrite --platform=darwin --arch=x64 --icon=src/resources/icon/logo.icns --prune=true --out=release",
-	"make:win86": "electron-packager . yandex-music-desktop-player-x86 --overwrite --asar=true --platform=win32 --arch=ia32 --icon=src/resources/icon/logo.ico --prune=true --out=release --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Yandex Music Desktop Player\"",
-    "make:win64": "electron-packager . yandex-music-desktop-player-x64 --overwrite --asar=true --platform=win32 --arch=x64 --icon=src/resources/icon/logo.ico --prune=true --out=release --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Yandex Music Desktop Player\"",
-    "make:linux": "electron-packager . yandex-music-desktop-player --overwrite --asar=true --platform=linux --arch=x64 --icon=src/resources/icon/logo.ico --prune=true --out=release"
+    "make": "electron-packager . --overwrite --icon=src/resources/icon/logo.ico --prune=true --out=release",
+    "make:mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=src/resources/icon/logo.icns --prune=true --out=release",
+	"make:win86": "electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --icon=src/resources/icon/logo.ico --prune=true --out=release --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Yandex Music Desktop Player\"",
+    "make:win64": "electron-packager . --overwrite --asar=true --platform=win32 --arch=x64 --icon=src/resources/icon/logo.ico --prune=true --out=release --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Yandex Music Desktop Player\"",
+    "make:linux": "electron-packager . --overwrite --asar=true --platform=linux --arch=x64 --icon=src/resources/icon/logo.ico --prune=true --out=release"
   },
   "repository": "https://github.com/bursy/yandex-music-desktop-player.git",
   "keywords": [
