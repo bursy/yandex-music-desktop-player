@@ -7,7 +7,7 @@ Electron-based desktop player for Yandex Music.
 
 ## Development
 ```sh
-git clone git@gitlab.com:bursy/yandex-music-desktop-player.git
+git clone git@github.com:bursy/yandex-music-desktop-player.git
 cd yandex-music-desktop-player
 npm install
 npm start

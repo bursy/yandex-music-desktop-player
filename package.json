@@ -12,7 +12,7 @@
     "make:win64": "electron-packager . yandex-music-desktop-player-x64 --overwrite --asar=true --platform=win32 --arch=x64 --icon=logo.ico --prune=true --out=release --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Yandex Music Desktop Player\"",
     "make:linux": "electron-packager . yandex-music-desktop-player --overwrite --asar=true --platform=linux --arch=x64 --icon=logo.ico --prune=true --out=release"
   },
-  "repository": "git@gitlab.com:bursy/yandex-music-desktop-player.git",
+  "repository": "git@github.com:bursy/yandex-music-desktop-player.git",
   "keywords": [
     "Yandex",
     "Music",
