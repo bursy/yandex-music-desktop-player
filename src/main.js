@@ -28,14 +28,16 @@ function createWindow() {
     mainWindow.on('closed', function () {
         mainWindow = null
     })
+
+    exports.mainWindow = mainWindow
 }
 
 app.on('ready', () => {
     createWindow()
 
-    globalShortcut.register('MediaPlayPause', () => player.playPause(mainWindow))
-    globalShortcut.register('MediaNextTrack', () => player.nextTrack(mainWindow))
-    globalShortcut.register('MediaPreviousTrack', () => player.previousTrack(mainWindow))
+    globalShortcut.register('MediaPlayPause', () => player.playPause())
+    globalShortcut.register('MediaNextTrack', () => player.nextTrack())
+    globalShortcut.register('MediaPreviousTrack', () => player.previousTrack())
 })
 
 app.on('window-all-closed', function () {

@@ -1,3 +1,5 @@
+const utils = require('./utils')
+
 const controlButtonsPrefix = "player-controls__btn"
 const playButtonSuffix = "_play"
 const pauseButtonSuffix = "_pause"
@@ -13,25 +15,19 @@ const previousButtonClass = controlButtonsPrefix + " " + controlButtonsPrefix + 
 let playing = false
 
 module.exports = {
-    playPause: function (mainWindow) {
+    playPause: function () {
         var buttonClass = playing ? pauseButtonClass : playButtonClass
         playing = !playing
-        click(mainWindow, buttonClass)
+        utils.click(buttonClass)
     },
 
-    nextTrack: function (mainWindow) {
+    nextTrack: function () {
         playing = true
-        click(mainWindow, nextButtonClass)
+        utils.click(nextButtonClass)
     },
 
-    previousTrack: function (mainWindow) {
+    previousTrack: function () {
         playing = true
-        click(mainWindow, previousButtonClass)
+        utils.click(previousButtonClass)
     }
 }
-
-// dumb ways of doing things 101: simulating button clicks
-function click(mainWindow, buttonClass) {
-    mainWindow.webContents.executeJavaScript("document.querySelectorAll('[class=\"" + buttonClass + "\"]')[0].click()")
-}
-
