@@ -1,0 +1,19 @@
+{
+  "name": "yandex-music-desktop-player",
+  "version": "0.0.1",
+  "description": "Yandex Music Desktop Player",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "Yandex",
+    "Music",
+    "Desktop",
+    "Player"
+  ],
+  "author": "bursy",
+  "devDependencies": {
+    "electron": "~1.8.2"
+  }
+}
