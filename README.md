@@ -17,7 +17,11 @@ MacOS:
 ```sh
 npm run make:mac
 ```
-Windows:
+Windows x86:
 ```sh
-npm run make:win
+npm run make:win86
+```
+Windows x64:
+```sh
+npm run make:win64
 ```
