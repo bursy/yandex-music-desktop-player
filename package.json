@@ -5,7 +5,8 @@
   "description": "Yandex Music Desktop Player",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "make:mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=logo.icns --prune=true --out=release"
   },
   "repository": "git@gitlab.com:bursy/yandex-music-desktop-player.git",
   "keywords": [
@@ -17,6 +18,7 @@
   "author": "bursy (Alex Ilyin)",
   "license": "MIT",
   "devDependencies": {
-    "electron": "~1.8.2"
+    "electron": "~1.8.2",
+    "electron-packager": "^11.0.1"
   }
 }
