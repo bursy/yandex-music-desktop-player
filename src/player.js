@@ -1,4 +1,4 @@
-const utils = require('./utils')
+const utils = require('./windowUtils')
 
 const controlButtonsPrefix = "player-controls__btn"
 const playButtonSuffix = "_play"

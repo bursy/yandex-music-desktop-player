@@ -3,6 +3,7 @@ const {app, globalShortcut} = require('electron')
 const BrowserWindow = electron.BrowserWindow
 
 const player = require('./player')
+const windowUtils = require('./windowUtils')
 
 const url = require('url')
 const path = require('path')
@@ -29,7 +30,7 @@ function createWindow() {
         mainWindow = null
     })
 
-    exports.mainWindow = mainWindow
+    windowUtils.init(mainWindow)
 }
 
 app.on('ready', () => {
