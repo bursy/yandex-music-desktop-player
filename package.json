@@ -6,6 +6,7 @@
   "main": "src/main.js",
   "scripts": {
     "start": "electron .",
+    "dist": "build",
     "make": "electron-packager . --overwrite --icon=src/resources/icon/logo.ico --prune=true --out=release",
     "make:mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=src/resources/icon/logo.icns --prune=true --out=release",
 	"make:win86": "electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --icon=src/resources/icon/logo.ico --prune=true --out=release --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Yandex Music Desktop Player\"",
@@ -19,10 +20,23 @@
     "Desktop",
     "Player"
   ],
+  "build": {
+    "appId": "org.bursy.yandex-music-desktop-player",
+    "productName": "Yandex Music Desktop Player",
+    "mac": {
+      "category": "public.app-category.music",
+      "icon": "src/resources/icon/logo.icns"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "src/resources/icon/logo.ico"
+    }
+  },
   "author": "bursy (Alex Ilyin)",
   "license": "MIT",
   "devDependencies": {
     "electron": "~1.8.2",
-    "electron-packager": "^11.0.1"
+    "electron-packager": "^11.0.1",
+    "electron-builder": "latest"
   }
 }
