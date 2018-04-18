@@ -1,33 +1,33 @@
 const utils = require('./windowUtils')
 
-const controlButtonsPrefix = "player-controls__btn"
-const playButtonSuffix = "_play"
-const pauseButtonSuffix = "_pause"
-const nextButtonSuffix = "_next"
-const previousButtonSuffix = "_prev"
+const CONTROL_BUTTONS_PREFIX = "player-controls__btn"
+const PLAY_BUTTON_PREFIX = "_play"
+const PAUSE_BUTTON_PREFIX = "_pause"
+const NEXT_BUTTON_PREFIX = "_next"
+const PREVIOUS_BUTTON_PREFIX = "_prev"
 
-const playButtonClass = controlButtonsPrefix + " " + controlButtonsPrefix + playButtonSuffix
+const PLAY_BUTTON_CLASS = CONTROL_BUTTONS_PREFIX + " " + CONTROL_BUTTONS_PREFIX + PLAY_BUTTON_PREFIX
 // not a typo, actually has 3 classes
-const pauseButtonClass = playButtonClass + " " + controlButtonsPrefix + pauseButtonSuffix
-const nextButtonClass = controlButtonsPrefix + " " + controlButtonsPrefix + nextButtonSuffix
-const previousButtonClass = controlButtonsPrefix + " " + controlButtonsPrefix + previousButtonSuffix
+const PAUSE_BUTTON_CLASS = PLAY_BUTTON_CLASS + " " + CONTROL_BUTTONS_PREFIX + PAUSE_BUTTON_PREFIX
+const NEXT_BUTTON_CLASS = CONTROL_BUTTONS_PREFIX + " " + CONTROL_BUTTONS_PREFIX + NEXT_BUTTON_PREFIX
+const PREVIOUS_BUTTON_CLASS = CONTROL_BUTTONS_PREFIX + " " + CONTROL_BUTTONS_PREFIX + PREVIOUS_BUTTON_PREFIX
 
 let playing = false
 
 module.exports = {
     playPause: function () {
-        var buttonClass = playing ? pauseButtonClass : playButtonClass
+        var buttonClass = playing ? PAUSE_BUTTON_CLASS : PLAY_BUTTON_CLASS
         playing = !playing
         utils.click(buttonClass)
     },
 
     nextTrack: function () {
         playing = true
-        utils.click(nextButtonClass)
+        utils.click(NEXT_BUTTON_CLASS)
     },
 
     previousTrack: function () {
         playing = true
-        utils.click(previousButtonClass)
+        utils.click(PREVIOUS_BUTTON_CLASS)
     }
 }
