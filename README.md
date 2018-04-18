@@ -13,19 +13,6 @@ npm install
 npm start
 ```
 ## Building
-For current OS:
 ```sh
-npm run make
-```
-MacOS:
-```sh
-npm run make:mac
-```
-Windows x86:
-```sh
-npm run make:win86
-```
-Windows x64:
-```sh
-npm run make:win64
+npm run dist
 ```
