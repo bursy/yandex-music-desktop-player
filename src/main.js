@@ -1,11 +1,12 @@
+const player = require('./player')
+const windowUtils = require('./windowUtils')
+const settings = require('./settings')
+const tweaks = require('./tweaks')
 const menu = require('./menu')
 
 const electron = require('electron')
 const {app, globalShortcut} = require('electron')
 const BrowserWindow = electron.BrowserWindow
-
-const player = require('./player')
-const windowUtils = require('./windowUtils')
 
 const url = require('url')
 const path = require('path')
@@ -21,7 +22,6 @@ function createWindow() {
             nodeIntegration: false
         }
     })
-
     mainWindow.loadURL(url.format({
         pathname: 'music.yandex.ru',
         protocol: 'https:',
@@ -33,11 +33,14 @@ function createWindow() {
     })
 
     windowUtils.init(mainWindow)
-    menu.init()
 }
 
 app.on('ready', () => {
     createWindow()
+
+    settings.init()
+    tweaks.init()
+    menu.init()
 
     globalShortcut.register('MediaPlayPause', () => player.playPause())
     globalShortcut.register('MediaNextTrack', () => player.nextTrack())

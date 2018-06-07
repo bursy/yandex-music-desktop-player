@@ -1,5 +1,7 @@
 const {app, Menu} =  require('electron')
 const player = require('./player')
+const tweaks = require('./tweaks')
+const settings = require('./settings')
 
 const menu = [
     {
@@ -15,7 +17,14 @@ const menu = [
         label: 'View',
         submenu: [
             {role: 'reload'},
-            {role: 'togglefullscreen'}
+            {role: 'togglefullscreen'},
+            {type: 'separator'},
+            {
+                label: 'Display teaser',
+                type: 'checkbox',
+                checked: settings.isTeaserDisplayed(),
+                click: () => tweaks.toggleTeaser()
+            }
         ]
     },
     {
