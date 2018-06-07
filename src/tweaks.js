@@ -3,7 +3,7 @@ const settings = require('./settings')
 
 const TEASER_CONTENT_CLASS = "teaser__content teaser__content_type_full"
 const TEASER_INIT_RETRY_INTERVAL = 250
-const TEASER_INIT_RETRY_COUNT = 20
+const TEASER_INIT_RETRY_COUNT = 40
 
 module.exports = {
     init: function () {
