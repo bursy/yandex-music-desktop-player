@@ -10,10 +10,6 @@ module.exports = {
         initTeaserWithRetries(TEASER_INIT_RETRY_COUNT)
     },
 
-    alert: function () {
-        utils.alert()
-    },
-
     toggleTeaser: function () {
         settings.setTeaserDisplayed(!settings.isTeaserDisplayed())
         updateTeaser()
