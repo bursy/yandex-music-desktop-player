@@ -3,6 +3,7 @@ const windowUtils = require('./windowUtils')
 const settings = require('./settings')
 const tweaks = require('./tweaks')
 const menu = require('./menu')
+const api = require('./api')
 
 const electron = require('electron')
 const {app, globalShortcut} = require('electron')
@@ -33,6 +34,7 @@ function createWindow() {
     })
 
     windowUtils.init(mainWindow)
+    api.init(mainWindow)
 }
 
 app.on('ready', () => {
