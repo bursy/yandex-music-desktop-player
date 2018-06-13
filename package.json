@@ -9,7 +9,7 @@
     "dist": "build",
     "make": "electron-packager . --overwrite --icon=src/resources/icon/logo.ico --prune=true --out=release",
     "make:mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=src/resources/icon/logo.icns --prune=true --out=release",
-	"make:win86": "electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --icon=src/resources/icon/logo.ico --prune=true --out=release --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Yandex Music Desktop Player\"",
+    "make:win86": "electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --icon=src/resources/icon/logo.ico --prune=true --out=release --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Yandex Music Desktop Player\"",
     "make:win64": "electron-packager . --overwrite --asar=true --platform=win32 --arch=x64 --icon=src/resources/icon/logo.ico --prune=true --out=release --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Yandex Music Desktop Player\"",
     "make:linux": "electron-packager . --overwrite --asar=true --platform=linux --arch=x64 --icon=src/resources/icon/logo.ico --prune=true --out=release"
   },
@@ -39,5 +39,8 @@
     "electron-packager": "^11.0.1",
     "electron-builder": "latest",
     "electron-settings": "latest"
+  },
+  "dependencies": {
+    "electron-settings": "^3.2.0"
   }
 }
